@@ -59,7 +59,7 @@ const local = {
 // ***************  FIN ARRAYS ****************
 
 
-/****************  MODAL OPEN-CLOSE   ******************/
+
 const openEls = document.querySelectorAll("[data-open]");
 const closeEls = document.querySelectorAll("[data-close]");
 const isVisible = "is-visible";
@@ -91,14 +91,7 @@ document.addEventListener("keyup", e => {
   }
 });
 
-/************************FIN OPEN-CLOSE MODAL****************/
 
-// ****  AGREGAR VENTAS   *****
-
-
-// **** FIN VENTAS POR SUCURSAL - *****
-
-// ********* MODAL NUEVA VENTA   ******  
 const formatDate = (date)=>{
 
 let dia = date.getDate();
@@ -111,16 +104,7 @@ let formatted_date = dia + "/" + mes + "/" + date.getFullYear()
   return formatted_date;
   }
 
-/*
-const  nombreVendedoras = local.vendedoras;
-for(let i=0; i< vendedorasNombres.length; i++){
-    let nuevaVenta = document.createElement("OPTION")
-    selectNuevaVenta.appendChild(nuevaVenta)
-    selectNuevaVenta.appendChild(nuevaVenta)
-    nuevaVenta.innerText = `${vendedorasNombres[i]}` 
-}
-vendedorasNombres();
-*/
+
 
 const cargarVendedoras=()=>{
   var selectVendedora = document.getElementById("opVendedora");
@@ -187,9 +171,7 @@ cargarSucursales();
 
 
 
-// **** FIN MODAL NUEVA VENTAS ********
 
-// *************** MODAL EDITAR VENTAS ******************
 const EditarVendedoras = () => {
   for (let i=0; i < vendedoras.length; i++){
       const optionVendedora = document.createElement('option');
@@ -197,7 +179,7 @@ const EditarVendedoras = () => {
       optionVendedora.innerText = `${vendedoras[i]}`;
   }
 }
-//EditarVendedoras();
+
   
 const EditarComponentes = () => {
   for (let i = 0; i < precios.length; i++) {
@@ -207,7 +189,7 @@ const EditarComponentes = () => {
       optionComponente.innerText = `${precios[i][0]}`;
   }
 }
-//sumarComponentesEdit();
+
 
 const EditarSucursales = () => {
   for (let i=0; i < sucursales.length; i++){
@@ -216,9 +198,7 @@ const EditarSucursales = () => {
           optionSucursal.innerText = `${sucursales[i]}`;
   }
 }
-//sumarSucursalesEdit();
 
-/// *******************************************
 const precioMaquina = (array) =>{
   let sumaPrecioComponentes = 0; 
   for (let precio of local.precios){
@@ -270,21 +250,7 @@ const contadorDeVentas = (ventas)=>{
   } 
   return acc
 }
-//console.log(vendedoraDelMes(0, 2019)); // "Ada" (vendio por $670, una máquina de $320 y otra de $350)
 
-// ---------- ventasMes -------------
-
-//const ventasDelMes = (mes, anio) => contadorDeVentas(ventasDelMes(mes, anio))
-//console.log(ventasDelMes(1, 2019)); // 1250
-
-
-//---------- ventasVendedora--------------------
-
-//const ventasVendedoras = (nombre) => contadorDeVentas(ventas.filter(venta =>venta.nombreVendedora === nombre))
-
-//console.log(ventasVendedoras('Grace')); // 900
-
-//----------  componente Mas Vendido -----------------
 
 const componenteMasVendido = () =>{
   let masVendido = ""
@@ -320,29 +286,6 @@ const LaMejorVendedora = ()=>{
 
 const huboVentas = (mes, anio) => ventasDelMes (mes, anio).length > 0 
 //console.log(huboVentas(3, 2019)); // false
-
-
-// 08 Crear la función ventasSucursal(sucursal), que obtiene las ventas totales realizadas por una sucursal sin límite de fecha.
-
-//const ventasSucursal = () =>{
-
-//console.log(ventasSucursal('Centro')); // 990
-
-// 09 Las funciones ventasSucursal y ventasVendedora tienen mucho código en común, ya que es la misma funcionalidad pero trabajando con una propiedad distinta. Entonces, ¿cómo harías para que ambas funciones reutilicen código y evitemos repetir?
-
-
-// 10 Crear la función sucursalDelMes(mes, anio), que se le pasa dos parámetros numéricos, (mes, anio) y devuelve el nombre de la sucursal que más vendió en plata en el mes. No cantidad de ventas, sino importe total de las ventas. El importe de una venta es el que indica la función precioMaquina. El mes es un número entero que va desde el 1 (enero) hasta el 12 (diciembre).
-
-
-// console.log(sucursalDelMes(1, 2019)); // "Centro"
-
-//  ***********    FIN HINTS ***********
-
-
-// ****************************CREAR TABLA EN MODAL  NUEVA VENTA *****************
-// *** crea fecha *** 
-
-// ***crea tabla ***
 
 
 const VentasXSucursal = (sucursal) => {
@@ -412,31 +355,9 @@ const crearTablaVenta = () =>{
   estrella.innerHTML=componenteMasVendido();
   vendedoraMejor.innerHTML=LaMejorVendedora();
 
-/*
-  for (let i=0; i<local.ventas.length; i++){
-    var crearFilasVentas =document.createElement("tr");
-    tablaVenta.appendChild(crearFilasVentas);
-     
-    crearFilasVentas.innerHTML= `
-      <td> ${formatDate(local.ventas[i][1])}</td>
-      <td> ${local.ventas[i][2]}</td>
-      <td> ${local.ventas[i][3]}</td>
-      <td> </td>
-      <td> </td>
-      <td class="iconos-edit"><i class="far fa-edit boton-editar" id="editar-${i}"></i></td>`
-  }   */
+
 }
-/*
-var crearFilasVentas =document.createElement("tr");
-  tablaVenta.appendChild(crearFilasVentas);
-  crearFilasVentas.innerHTML= `
-    <td> ${formatDate( fecha )} </td>
-    <td> ${vendedora} </td>
-    <td> ${sucursal} </td>
-    <td> ${componente} </td>
-    <td> ${precioUnComponente(componente)}  </td>
-    <td class="iconos-edit"><i class="far fa-edit boton-editar" id="editar-999"></i></td>`
-}*/
+
 
 crearTablaVenta();
 

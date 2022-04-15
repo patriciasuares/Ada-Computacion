@@ -315,12 +315,22 @@ body, html{height:100%}
     
 }
 
+.wrapper{
+    height:250px; 
+    width:550px; 
+    overflow:scroll; 
+    white-space:nowrap;
+  }
+  .wrapper div{
+    display:inline-block;
+  }
+
 /*FIN ELIMINAR VENTAS*/
 
 
-/*RESPONSIVE
+/**********   RESPONSIVE *********************/
 
-@media (max-width:1024PX){*/
+@media (max-width:1024PX){
    
 
 @media (max-width:768px){
@@ -354,9 +364,6 @@ body, html{height:100%}
 }
 }
 
-
-
-
 @media (max-width: 480px){
     nav{
         visibility: hidden;
@@ -386,6 +393,7 @@ body, html{height:100%}
         flex-direction:wrap;
     }
 
-}
+}*/
+
 
 

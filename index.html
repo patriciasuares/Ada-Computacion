@@ -20,17 +20,10 @@
                     <th class="celda" style="width:150px;">Total Ventas</th>   
                 </tr>
                     <!-- TRAIGO DATOS JS  -->     
-                    <!--<tr>
-                        <td>Centro</td>
-                        <td> 900 </td>
-                    </tr>    
-                    <tr>
-                        <td>Caballito</td>
-                        <td> 580 </td>
-                    </tr>-->
             </table>
         </div>
     </div>
+    
 <!-- *****  FIN VENTAS POR SUCURSAL ****** -->
 
 <!-- ****** CAJA REPORTES ****** -->
@@ -61,17 +54,17 @@
                 <button class="btn open-modal" data-open="modal1"><img src="imagenes/plus_icon-icons.com_69476.png"width=15px; height=15px;>Nueva Venta</button>
         </div>
         <div class="detalle" style="height:100%;">
-            <table id="table-estadisticas">
-                <tr>
-                    <th class="celda" style="width:80px;">Fecha</th>
-                    <th class="celda" >Vendedora</th>   
-                    <th class="celda" >Sucursal</th>
-                    <th class="celda" style="width:200px;">Componentes</th> 
-                    <th class="celda" >Precios</th>
-                    <th class="celda" >Acciones</th>
-                </tr>
-               <!-- TRAIGO DATOS JS  --> 
-            </table>
+
+                    <table id="table-estadisticas">
+                        <tr>
+                            <th class="celda" style="width:80px;">Fecha</th>
+                            <th class="celda" >Vendedora</th>   
+                            <th class="celda" >Sucursal</th>
+                            <th class="celda" style="width:200px;">Componentes</th> 
+                            <th class="celda" >Precios</th>
+                            <th class="celda" >Acciones</th>
+                        </tr>
+                    </table>
         </div>
     </div>
 </section>
@@ -91,46 +84,20 @@
                 <label class="nombre" id="nuevaVenta">Vendedora</label>
                     <div class="select"> 
                     <select id="opVendedora">
-                    <!-- TRAIGO DATOS JS         
-                        <option value="0">Ada</option>
-                        <option value="1">Grace</option>
-                        <option value="2">Hedy</option>
-                        <option value="3">Sheryl</option>-->
+                    <!-- TRAIGO DATOS JS-->         
                     </select>
                     </div> 
-                    
                 <label class="nombre" id="">Componentes</label>
                     <select id="opComponente1">
-                    <!-- TRAIGO DATOS JS        
-                        <option>Monitor GPRS 3000</option>
-                        <option>Motherboard ASUS 1500</option>
-                        <option>Monitor ASC 543</option>
-                        <option>Motherboard ASUS 1200</option>
-                        <option>Motherboard MZI</option>
-                        <option>HDD Toyiva</option>
-                        <option>HDD Wezter Dishital</option>
-                        <option>RAM Quinston</option>
-                        <option>RAM Quinston Fury</option>-->
+                    <!-- TRAIGO DATOS JS -->
                     </select> 
                     <select id="opComponente2">
-                            <!-- TRAIGO DATOS JS        
-                                <option>Monitor GPRS 3000</option>
-                                <option>Motherboard ASUS 1500</option>
-                                <option>Monitor ASC 543</option>
-                                <option>Motherboard ASUS 1200</option>
-                                <option>Motherboard MZI</option>
-                                <option>HDD Toyiva</option>
-                                <option>HDD Wezter Dishital</option>
-                                <option>RAM Quinston</option>
-                                <option>RAM Quinston Fury</option>-->
+
                             </select> 
                 <label class="nombre" id="">Sucursal</label>
                     <div class="select"> 
                         <select id="opSucursal">
-                        <!-- TRAIGO DATOS JS  
-                        <option value="Option 1">Centro</option>
-                        <option value="Option 2">Caballito</option>
-                        <option value="Option length">-->
+
                         </select>
                     </div>
                 <form class="form" action="/action_page.php">
@@ -139,10 +106,7 @@
                 </form>
                
                 <td>
-                    <!--
-                    <img src="imagenes/edit_pencil_write_1574.png" width=15px; height=15px;  data-open="modal2" onclick="editar();">
-                    <img src="imagenes/delete_garbage_icon-icons.com_49916.png" width=15px; height=15px; data-open="modal3"onclick="patri();">
-                    -->
+
                 </td>
             </div>
             </div>
@@ -176,46 +140,21 @@
                     <label class="nombre" id="nuevaVenta">Vendedora</label>
                         <div class="select"> 
                         <select id="opVendedoraEdit">
-                        <!-- TRAIGO DATOS JS         
-                            <option value="0">Ada</option>
-                            <option value="1">Grace</option>
-                            <option value="2">Hedy</option>
-                            <option value="3">Sheryl</option>-->
+
                         </select>
                         </div> 
                         
                     <label class="nombre" id="">Componentes</label>
                         <select id="opComponenteEdit1">
-                        <!-- TRAIGO DATOS JS        
-                            <option>Monitor GPRS 3000</option>
-                            <option>Motherboard ASUS 1500</option>
-                            <option>Monitor ASC 543</option>
-                            <option>Motherboard ASUS 1200</option>
-                            <option>Motherboard MZI</option>
-                            <option>HDD Toyiva</option>
-                            <option>HDD Wezter Dishital</option>
-                            <option>RAM Quinston</option>
-                            <option>RAM Quinston Fury</option>-->
+
                         </select>
                         <select id="opComponenteEdit2">
-                                <!-- TRAIGO DATOS JS        
-                                    <option>Monitor GPRS 3000</option>
-                                    <option>Motherboard ASUS 1500</option>
-                                    <option>Monitor ASC 543</option>
-                                    <option>Motherboard ASUS 1200</option>
-                                    <option>Motherboard MZI</option>
-                                    <option>HDD Toyiva</option>
-                                    <option>HDD Wezter Dishital</option>
-                                    <option>RAM Quinston</option>
-                                    <option>RAM Quinston Fury</option>-->
+
                                 </select> 
                     <label class="nombre" id="">Sucursal</label>
                         <div class="select"> 
                             <select id="opSucursalEdit">
-                            <!-- TRAIGO DATOS JS  
-                            <option value="Option 1">Centro</option>
-                            <option value="Option 2">Caballito</option>
-                            <option value="Option length">-->
+
                             </select>
                         </div>
                     <form class="form" action="/action_page.php">
@@ -224,10 +163,7 @@
                     </form>
                    
                     <td>
-                        <!--
-                        <img src="imagenes/edit_pencil_write_1574.png" width=15px; height=15px;  data-open="modal2" onclick="editar();">
-                        <img src="imagenes/delete_garbage_icon-icons.com_49916.png" width=15px; height=15px; data-open="modal3"onclick="patri();">
-                        -->
+
                     </td>
                 </div>
                 </div>
