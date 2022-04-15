@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tp2 Ada Computacion</title>
+    <link href="CSS/estadistica.css" rel="stylesheet">
+   
+</head>
+<body>
+<!-- ******   VENTAS POR SUCURSAL ***** -->
+<section class="secEstadisticas">
+    <div class="cuadroEstadistica">
+        <h1 class="title">Ventas Por Sucursal</h1>
+        <div class="detalle">
+            <table id="table-estadistica">
+                <tr>
+                    <th class="celda" style="width:200px;">Sucursal</th>
+                    <th class="celda" style="width:150px;">Total Ventas</th>   
+                </tr>
+                    <!-- TRAIGO DATOS JS  -->     
+                    <!--<tr>
+                        <td>Centro</td>
+                        <td> 900 </td>
+                    </tr>    
+                    <tr>
+                        <td>Caballito</td>
+                        <td> 580 </td>
+                    </tr>-->
+            </table>
+        </div>
+    </div>
+<!-- *****  FIN VENTAS POR SUCURSAL ****** -->
+
+<!-- ****** CAJA REPORTES ****** -->
+<div class="cuadroEstadistica">
+    <h1 class="title">Reportes</h1>
+    <div class="detalle">
+        <table>
+            <tr>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Producto Estrella: <strong><span id="estrella">0</span></strong></td>
+            <tr> 
+            <tr>
+                <td>Vendedora que más ingresos Generó: <strong><span id="vendedoraMejor">0</span></strong> </td>
+            <tr>
+        </table>
+    </div>
+</div>
+</section>
+<!-- ***** FIN CAJA REPORTES   ****** --> 
+
+<!-- ****** CAJA VENTAS  ******-->  
+<section class="secVentas"style="height:auto;">
+    <div class="modalNuevaVenta">
+        <div class="cabecera">
+                <h1 class="title" style="justify-content: left;">Ventas</h1>
+                <button class="btn open-modal" data-open="modal1"><img src="imagenes/plus_icon-icons.com_69476.png"width=15px; height=15px;>Nueva Venta</button>
+        </div>
+        <div class="detalle" style="height:100%;">
+            <table id="table-estadisticas">
+                <tr>
+                    <th class="celda" style="width:80px;">Fecha</th>
+                    <th class="celda" >Vendedora</th>   
+                    <th class="celda" >Sucursal</th>
+                    <th class="celda" style="width:200px;">Componentes</th> 
+                    <th class="celda" >Precios</th>
+                    <th class="celda" >Acciones</th>
+                </tr>
+               <!-- TRAIGO DATOS JS  --> 
+            </table>
+        </div>
+    </div>
+</section>
+ 
+<!-- ****** FIN CAJA VENTAS ****** -->
+
+<!-- ***** MODAL1 AGREGAR VENTAS ***** -->
+<div class="modal" id="modal1"  >
+    <div class="modal-dialog" style="width:400px;">
+        <header class="modal-header">
+            <h1 class="titulo">Agregar Venta</h1>
+        </header>
+        <section class="modal-content">
+            <div class="modalAgregarVentas" >
+            <div class="detalle1">
+            <div class="form">
+                <label class="nombre" id="nuevaVenta">Vendedora</label>
+                    <div class="select"> 
+                    <select id="opVendedora">
+                    <!-- TRAIGO DATOS JS         
+                        <option value="0">Ada</option>
+                        <option value="1">Grace</option>
+                        <option value="2">Hedy</option>
+                        <option value="3">Sheryl</option>-->
+                    </select>
+                    </div> 
+                    
+                <label class="nombre" id="">Componentes</label>
+                    <select id="opComponente1">
+                    <!-- TRAIGO DATOS JS        
+                        <option>Monitor GPRS 3000</option>
+                        <option>Motherboard ASUS 1500</option>
+                        <option>Monitor ASC 543</option>
+                        <option>Motherboard ASUS 1200</option>
+                        <option>Motherboard MZI</option>
+                        <option>HDD Toyiva</option>
+                        <option>HDD Wezter Dishital</option>
+                        <option>RAM Quinston</option>
+                        <option>RAM Quinston Fury</option>-->
+                    </select> 
+                    <select id="opComponente2">
+                            <!-- TRAIGO DATOS JS        
+                                <option>Monitor GPRS 3000</option>
+                                <option>Motherboard ASUS 1500</option>
+                                <option>Monitor ASC 543</option>
+                                <option>Motherboard ASUS 1200</option>
+                                <option>Motherboard MZI</option>
+                                <option>HDD Toyiva</option>
+                                <option>HDD Wezter Dishital</option>
+                                <option>RAM Quinston</option>
+                                <option>RAM Quinston Fury</option>-->
+                            </select> 
+                <label class="nombre" id="">Sucursal</label>
+                    <div class="select"> 
+                        <select id="opSucursal">
+                        <!-- TRAIGO DATOS JS  
+                        <option value="Option 1">Centro</option>
+                        <option value="Option 2">Caballito</option>
+                        <option value="Option length">-->
+                        </select>
+                    </div>
+                <form class="form" action="/action_page.php">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha">
+                </form>
+               
+                <td>
+                    <!--
+                    <img src="imagenes/edit_pencil_write_1574.png" width=15px; height=15px;  data-open="modal2" onclick="editar();">
+                    <img src="imagenes/delete_garbage_icon-icons.com_49916.png" width=15px; height=15px; data-open="modal3"onclick="patri();">
+                    -->
+                </td>
+            </div>
+            </div>
+            </div>    
+        </section>
+        <footer class="modal-footer">
+            <div class="accion">
+                
+                <button onclick="guardar()" class="save" >Guardar</button>
+                <button class="cnl close-modal" data-close>Cancelar</button>
+            </div>
+        </footer>
+        </div>
+    </div>
+</div>
+
+<!-- ***** FIN MODAL1  DE AGREGAR VENTAS ***** -->
+
+<!-- ******* MODAL2 EDITAR VENTAS ******* -->
+
+<div class="modal" id="modalEdit"  >
+        <div class="modal-dialog" style="width:400px;">
+            <header class="modal-header">
+                <h1 class="titulo">Editar Venta</h1>
+            </header>
+            <section class="modal-content">
+                <div class="modalAgregarVentas" >
+                <div class="detalle1">
+                <div class="form">
+                    <label class="nombre" id="lblIdVenta">Id:<span id="idVenta">0</span></label>
+                    <label class="nombre" id="nuevaVenta">Vendedora</label>
+                        <div class="select"> 
+                        <select id="opVendedoraEdit">
+                        <!-- TRAIGO DATOS JS         
+                            <option value="0">Ada</option>
+                            <option value="1">Grace</option>
+                            <option value="2">Hedy</option>
+                            <option value="3">Sheryl</option>-->
+                        </select>
+                        </div> 
+                        
+                    <label class="nombre" id="">Componentes</label>
+                        <select id="opComponenteEdit1">
+                        <!-- TRAIGO DATOS JS        
+                            <option>Monitor GPRS 3000</option>
+                            <option>Motherboard ASUS 1500</option>
+                            <option>Monitor ASC 543</option>
+                            <option>Motherboard ASUS 1200</option>
+                            <option>Motherboard MZI</option>
+                            <option>HDD Toyiva</option>
+                            <option>HDD Wezter Dishital</option>
+                            <option>RAM Quinston</option>
+                            <option>RAM Quinston Fury</option>-->
+                        </select>
+                        <select id="opComponenteEdit2">
+                                <!-- TRAIGO DATOS JS        
+                                    <option>Monitor GPRS 3000</option>
+                                    <option>Motherboard ASUS 1500</option>
+                                    <option>Monitor ASC 543</option>
+                                    <option>Motherboard ASUS 1200</option>
+                                    <option>Motherboard MZI</option>
+                                    <option>HDD Toyiva</option>
+                                    <option>HDD Wezter Dishital</option>
+                                    <option>RAM Quinston</option>
+                                    <option>RAM Quinston Fury</option>-->
+                                </select> 
+                    <label class="nombre" id="">Sucursal</label>
+                        <div class="select"> 
+                            <select id="opSucursalEdit">
+                            <!-- TRAIGO DATOS JS  
+                            <option value="Option 1">Centro</option>
+                            <option value="Option 2">Caballito</option>
+                            <option value="Option length">-->
+                            </select>
+                        </div>
+                    <form class="form" action="/action_page.php">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fechaEdit" name="fecha">
+                    </form>
+                   
+                    <td>
+                        <!--
+                        <img src="imagenes/edit_pencil_write_1574.png" width=15px; height=15px;  data-open="modal2" onclick="editar();">
+                        <img src="imagenes/delete_garbage_icon-icons.com_49916.png" width=15px; height=15px; data-open="modal3"onclick="patri();">
+                        -->
+                    </td>
+                </div>
+                </div>
+                </div>    
+            </section>
+            <footer class="modal-footer">
+                <div class="accion">
+                    
+                    <button onclick="guardarEditar()" class="save" >Guardar</button>
+                    <button class="cnl close-modal" data-close>Cancelar</button>
+                </div>
+            </footer>
+            </div>
+        </div>
+    </div>
+
+<!-- ***** FIN MODAL2 DE EDITAR VENTAS ***** -->
+
+<!-- ***** MODAL3 ELIMINAR VTAS ***** -->
+<div class="modal" id="modalConfirmar">
+    <div class="modal-dialog"style="width:400px">
+        <header class="modal-header">
+            <h1 class="tituloeliminar">Eliminar Venta</h1>
+        </header>
+        <section class="modal-content">
+            <div class="modalEliminarVentas"></div>
+                <div class="detalle26"> 
+                    <p style="font-size:25px">¿Estás Segura?</p>
+                    <p style="color:black; font-size:15px">Esta acción no se puede revertir</p>
+                </div>  
+
+        </section>
+        <footer class="modal-footer">
+            <div class="acciones">
+                
+                <button onclick="eliminarConfirmado()" class="btneliminar" >Eliminar</button>
+                <button class="cnl close-modal" data-close>Cancelar</button>
+            </div>
+        </footer>
+</div>
+</div>
+<!-- ***** FIN MODAL3 ELIMINAR VENTAS ***** -->
+          
+<script type="text/javascript" src="JS/script.js"   ></script>
+
+</body>
+</html>
+
+
